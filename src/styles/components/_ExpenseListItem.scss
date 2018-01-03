@@ -1,0 +1,19 @@
+.ExpenseItem__description,
+.ExpenseItem__amount,
+.ExpenseItem__createdAt {
+  display: inline-block;
+}
+.ExpenseItem__description {
+  text-align: left;
+  width: 50%;
+  max-width: 180px;
+}
+.ExpenseItem__amount,
+.ExpenseItem__createdAt {
+  text-align: right;
+  width: 25%;
+  max-width: 120px;
+}
+.ExpenseItem__btnRemove {
+  margin-left: 1rem;
+}

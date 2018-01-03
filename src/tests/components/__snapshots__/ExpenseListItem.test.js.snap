@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test a single ExpenseListItem 1`] = `
+<p>
+  <span
+    className="ExpenseItem__description"
+  >
+    <Link
+      replace={false}
+      to="/edit/d"
+    >
+      Gastronomy
+    </Link>
+  </span>
+  <span
+    className="ExpenseItem__amount"
+  >
+    10000
+  </span>
+  <span
+    className="ExpenseItem__createdAt"
+  >
+    691200000
+  </span>
+</p>
+`;
