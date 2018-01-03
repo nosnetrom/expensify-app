@@ -16,11 +16,11 @@ import './styles/styles.scss';
 const store = configureStore();
 
 // store.dispatch() returns an object
-store.dispatch(addExpense({ description: 'water bill', amount: 5000, createdAt: 1514236934654 }));
-store.dispatch(addExpense({ description: 'rent', amount: 105000, createdAt: 1513256834654 }));
-store.dispatch(addExpense({ description: 'gas bill', amount: 3500, createdAt: 1515246734654 }));
+// store.dispatch(addExpense({ description: 'water bill', amount: 5000, createdAt: 1514236934654 }));
+// store.dispatch(addExpense({ description: 'rent', amount: 105000, createdAt: 1513256834654 }));
+// store.dispatch(addExpense({ description: 'gas bill', amount: 3500, createdAt: 1515246734654 }));
 
-const state = store.getState();
+// const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 console.log(visibleExpenses);
 
