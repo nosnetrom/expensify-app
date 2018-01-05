@@ -20,7 +20,7 @@ exports[`test a single ExpenseListItem 1`] = `
   <span
     className="ExpenseItem__createdAt"
   >
-    691200000
+    Jan 08 1970
   </span>
 </p>
 `;
