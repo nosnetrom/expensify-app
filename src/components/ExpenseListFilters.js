@@ -28,7 +28,9 @@ export class ExpenseListFilters extends React.Component {
         <input type="text" 
           className="ExpenseList__filters"
           value={this.props.filters.text}
-          onChange={this.onTextChange} />
+          onChange={this.onTextChange}
+          placeholder="Filter by text"
+        />
         <label htmlFor="selectSortBy"> Sort by: </label>
         <select 
           name="selectSortBy"
