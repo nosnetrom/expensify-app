@@ -15,7 +15,7 @@ exports[`test a single ExpenseListItem 1`] = `
   <span
     className="ExpenseItem__amount"
   >
-    10000
+    $100.00
   </span>
   <span
     className="ExpenseItem__createdAt"

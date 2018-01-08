@@ -5,6 +5,7 @@ exports[`test to render ExpenseListFilters correctly 1`] = `
   <input
     className="ExpenseList__filters"
     onChange={[Function]}
+    placeholder="Filter by text"
     type="text"
     value=""
   />
@@ -120,6 +121,7 @@ exports[`test to render alternate ExpenseListFilters correctly 1`] = `
   <input
     className="ExpenseList__filters"
     onChange={[Function]}
+    placeholder="Filter by text"
     type="text"
     value="bills"
   />
