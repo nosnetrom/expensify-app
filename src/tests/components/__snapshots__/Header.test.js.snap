@@ -9,7 +9,6 @@ exports[`test to render Header 1`] = `
     <NavLink
       activeClassName="isActive"
       ariaCurrent="true"
-      exact={true}
       to="/dashboard"
     >
       Dashboard
@@ -21,14 +20,6 @@ exports[`test to render Header 1`] = `
       to="/create"
     >
       Create Expense
-    </NavLink>
-     
-    <NavLink
-      activeClassName="isActive"
-      ariaCurrent="true"
-      to="/help"
-    >
-      Help
     </NavLink>
      
     <button
