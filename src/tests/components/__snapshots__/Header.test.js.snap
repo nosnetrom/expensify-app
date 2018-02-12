@@ -10,7 +10,7 @@ exports[`test to render Header 1`] = `
       activeClassName="isActive"
       ariaCurrent="true"
       exact={true}
-      to="/"
+      to="/dashboard"
     >
       Dashboard
     </NavLink>
@@ -30,6 +30,13 @@ exports[`test to render Header 1`] = `
     >
       Help
     </NavLink>
+     
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Logout
+    </button>
   </p>
 </header>
 `;

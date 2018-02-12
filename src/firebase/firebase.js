@@ -14,6 +14,7 @@ const config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 database.ref('expenses').on('child_removed', (snapshot) => {
   console.log(snapshot.key, snapshot.val()); // returns the deleted node
@@ -24,10 +25,10 @@ database.ref('expenses').on('child_changed', (snapshot) => {
 });
 
 database.ref('expenses').on('child_added', (snapshot) => {
-  console.log(snapshot.key, snapshot.val()); // returns once for each existing node, plus once for the added node
+  //console.log(snapshot.key, snapshot.val()); // returns once for each existing node, plus once for the added node
 });
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };
 
 // database.ref('expenses')
 //   .on('value', (snapshot) => {
