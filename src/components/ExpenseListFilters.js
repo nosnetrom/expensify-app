@@ -24,35 +24,41 @@ export class ExpenseListFilters extends React.Component {
   };
   render() {
     return (
-      <div>
-        <input type="text" 
-          className="ExpenseList__filters"
-          value={this.props.filters.text}
-          onChange={this.onTextChange}
-          placeholder="Filter by text"
-        />
-        <label htmlFor="selectSortBy"> Sort by: </label>
-        <select 
-          name="selectSortBy"
-          value={this.props.filters.sortBy}
-          onChange={this.onSortChange}>
-            <option 
-              value="date"
-            >Date</option>
-            <option 
-              value="amount"
-            >Amount</option>
-        </select>
-        <DateRangePicker 
-          startDate={this.props.filters.startDate}
-          endDate={this.props.filters.endDate}
-          onDatesChange={this.onDatesChange}
-          onFocusChange={this.onFocusChange}
-          focusedInput={this.state.calendarFocused}
-          showClearDates={true}
-          numberOfMonths={1}
-          isOutsideRange={() => false}
-        />
+      <div className="filters-container">
+        <div>
+          <input type="text" 
+            className="ExpenseList__filters"
+            value={this.props.filters.text}
+            onChange={this.onTextChange}
+            placeholder="Filter by text"
+          />
+        </div>
+        <div>
+          <label htmlFor="selectSortBy"> Sort by: </label>
+            <select 
+              name="selectSortBy"
+              value={this.props.filters.sortBy}
+              onChange={this.onSortChange}>
+                <option 
+                  value="date"
+                >Date</option>
+                <option 
+                  value="amount"
+                >Amount</option>
+            </select>
+        </div>
+        <div>
+          <DateRangePicker 
+            startDate={this.props.filters.startDate}
+            endDate={this.props.filters.endDate}
+            onDatesChange={this.onDatesChange}
+            onFocusChange={this.onFocusChange}
+            focusedInput={this.state.calendarFocused}
+            showClearDates={true}
+            numberOfMonths={1}
+            isOutsideRange={() => false}
+          />
+        </div>
       </div>
     )
   };

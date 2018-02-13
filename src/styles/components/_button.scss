@@ -1,0 +1,15 @@
+button {
+  border: none;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+.btn-blue {
+  background-color: $blue;
+  color: $white;
+  display: inline-block;
+  line-height: 1;
+  padding: $sSize $xsSize;
+  text-decoration: none;
+}
