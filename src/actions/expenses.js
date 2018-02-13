@@ -35,21 +35,21 @@ export const removeExpense = ({id} = {}) => ({
 export const startRemoveExpense = ({id} = {}) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
-    return database.ref(`users/${uid}/expenses/${id}`).remove().then((snapshot) => {
-      dispatch(removeExpense({id}));
+    return database.ref(`users/${uid}/expenses/${id}`).remove().then(() => {
+      dispatch(removeExpense({ id }));
     });
   };
 };
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
-  type: "EDIT_EXPENSE",
+  type: 'EDIT_EXPENSE',
   id,
   updates
 });
 export const startEditExpense = (id, updates) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
-    return database.ref(`users/${uid}/expenses/${id}`).update({updates}).then(() => {
+    return database.ref(`users/${uid}/expenses/${id}`).update(updates).then(() => {
       dispatch(editExpense(id, updates));
     });
   };
