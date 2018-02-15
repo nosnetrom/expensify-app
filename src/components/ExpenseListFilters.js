@@ -24,10 +24,10 @@ export class ExpenseListFilters extends React.Component {
   };
   render() {
     return (
-      <div className="filters-container">
+      <div className="filters-container content-container">
         <div>
           <input type="text" 
-            className="ExpenseList__filters"
+            className="ExpenseList__filters text-input"
             value={this.props.filters.text}
             onChange={this.onTextChange}
             placeholder="Filter by text"
@@ -37,6 +37,7 @@ export class ExpenseListFilters extends React.Component {
           <label htmlFor="selectSortBy"> Sort by: </label>
             <select 
               name="selectSortBy"
+              className="select-input"
               value={this.props.filters.sortBy}
               onChange={this.onSortChange}>
                 <option 

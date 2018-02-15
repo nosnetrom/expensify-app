@@ -13,3 +13,7 @@ button:disabled {
   padding: $sSize $xsSize;
   text-decoration: none;
 }
+.ExpenseItem__btnRemove {
+  @extend .btn-blue;
+  background-color: #888888;
+}

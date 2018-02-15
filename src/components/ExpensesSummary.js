@@ -9,11 +9,13 @@ export const ExpensesSummary = ({expenseCount, expensesTotal}) => {
   const expenseWord = expenseCount === 1 ? 'expense' : 'expenses';
   return (
     <div className="page-header">
-      <p className="page-header__title">
-        Viewing <span>{expenseCount}</span> {expenseWord} totalling <span>{numeral(expensesTotal / 100).format('$0,0.00')}</span>.
-      </p>
-      <div className="page-header__actions">
-        <Link className="btn-blue" to="/create">Add Expense</Link>
+      <div className="content-container">
+        <p className="page-header__title">
+          Viewing <span>{expenseCount}</span> {expenseWord} totalling <span>{numeral(expensesTotal / 100).format('$0,0.00')}</span>.
+        </p>
+        <div className="page-header__actions">
+          <Link className="btn-blue" to="/create">Add Expense</Link>
+        </div>
       </div>
     </div>
   );

@@ -1,29 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`testing ExpensesSummary component, multiple expenses 1`] = `
-<div>
-  <p>
-    Viewing 
-    10
-     
-    expenses
-     totalling 
-    $1,234,567.89
-    .
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <p
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+        10
+      </span>
+       
+      expenses
+       totalling 
+      <span>
+        $1,234,567.89
+      </span>
+      .
+    </p>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="btn-blue"
+        replace={false}
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`testing ExpensesSummary component, single expense 1`] = `
-<div>
-  <p>
-    Viewing 
-    1
-     
-    expense
-     totalling 
-    $1.95
-    .
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <p
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+        1
+      </span>
+       
+      expense
+       totalling 
+      <span>
+        $1.95
+      </span>
+      .
+    </p>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="btn-blue"
+        replace={false}
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;

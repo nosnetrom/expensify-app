@@ -2,11 +2,15 @@
 
 exports[`should correctly render LoginPage 1`] = `
 <div
-  className="LoginPage"
+  className="LoginPage box-layout"
 >
   <p>
-    <button>
-      Login
+    The Expensify App
+    <br />
+    <button
+      className="btn-blue"
+    >
+      Login with Google
     </button>
   </p>
 </div>
