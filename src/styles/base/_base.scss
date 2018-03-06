@@ -1,19 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
-
 body {
   background-color: #f5f5f5;
-  font-family: Helvetica, Tahoma, sans-serif;
+  color: $dk-grey;
+  font-family: Tahoma, Helvetica, sans-serif;
   font-size: $mSize;
+  line-height: 1.625;
 }
 
-button {
-  cursor: pointer;
-}
-button:disabled {
-  cursor: default;
-}
 
 .isActive {
   font-weight: 700;

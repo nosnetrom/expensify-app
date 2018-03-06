@@ -1,26 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test a single ExpenseListItem 1`] = `
-<p>
-  <span
-    className="ExpenseItem__description"
-  >
-    <Link
-      replace={false}
-      to="/edit/d"
+<Link
+  className="list-item"
+  replace={false}
+  to="/edit/d"
+>
+  <div>
+    <span
+      className="list-item__description"
     >
       Gastronomy
-    </Link>
-  </span>
-  <span
-    className="ExpenseItem__amount"
+    </span>
+    <br />
+    <span
+      className="list-item__createdAt"
+    >
+      Jan 08 1970
+    </span>
+  </div>
+  <div
+    className="list-item__amount"
   >
     $100.00
-  </span>
-  <span
-    className="ExpenseItem__createdAt"
-  >
-    Jan 08 1970
-  </span>
-</p>
+  </div>
+</Link>
 `;

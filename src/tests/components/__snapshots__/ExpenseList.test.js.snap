@@ -1,46 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test render ExpenseList with expenses 1`] = `
-<div>
-  <ExpenseListItem
-    amount={195}
-    createdAt={0}
-    description="Gum"
-    id="a"
-    key="a"
-    note=""
-  />
-  <ExpenseListItem
-    amount={5950}
-    createdAt={-345600000}
-    description="Groceries"
-    id="b"
-    key="b"
-    note=""
-  />
-  <ExpenseListItem
-    amount={1950}
-    createdAt={345600000}
-    description="Gardening"
-    id="c"
-    key="c"
-    note=""
-  />
-  <ExpenseListItem
-    amount={10000}
-    createdAt={691200000}
-    description="Gastronomy"
-    id="d"
-    key="d"
-    note=""
-  />
+<div
+  className="content-container"
+>
+  <div
+    className="list-heading"
+  >
+    <div
+      className="showForMobile"
+    >
+      Expense
+    </div>
+    <div
+      className="showNonMobile"
+    >
+      Expense
+    </div>
+    <div
+      className="showNonMobile"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <ExpenseListItem
+      amount={195}
+      createdAt={0}
+      description="Gum"
+      id="a"
+      key="a"
+      note=""
+    />
+    <ExpenseListItem
+      amount={5950}
+      createdAt={-345600000}
+      description="Groceries"
+      id="b"
+      key="b"
+      note=""
+    />
+    <ExpenseListItem
+      amount={1950}
+      createdAt={345600000}
+      description="Gardening"
+      id="c"
+      key="c"
+      note=""
+    />
+    <ExpenseListItem
+      amount={10000}
+      createdAt={691200000}
+      description="Gastronomy"
+      id="d"
+      key="d"
+      note=""
+    />
+  </div>
 </div>
 `;
 
 exports[`test render ExpenseList with no expenses 1`] = `
-<div>
-  <p>
-    There are no recorded expenses.
-  </p>
+<div
+  className="content-container"
+>
+  <div
+    className="list-heading"
+  >
+    <div
+      className="showForMobile"
+    >
+      Expense
+    </div>
+    <div
+      className="showNonMobile"
+    >
+      Expense
+    </div>
+    <div
+      className="showNonMobile"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <p>
+      There are no recorded expenses.
+    </p>
+  </div>
 </div>
 `;

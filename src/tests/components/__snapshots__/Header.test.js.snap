@@ -2,34 +2,28 @@
 
 exports[`test to render Header 1`] = `
 <header>
-  <h1>
-    Expensify
-  </h1>
-  <p>
-    <NavLink
-      activeClassName="isActive"
-      ariaCurrent="true"
-      exact={true}
-      to="/"
+  <div
+    className="content-container"
+  >
+    <div
+      className="header__content"
     >
-      Dashboard
-    </NavLink>
-     
-    <NavLink
-      activeClassName="isActive"
-      ariaCurrent="true"
-      to="/create"
-    >
-      Create Expense
-    </NavLink>
-     
-    <NavLink
-      activeClassName="isActive"
-      ariaCurrent="true"
-      to="/help"
-    >
-      Help
-    </NavLink>
-  </p>
+      <Link
+        replace={false}
+        to="/dashboard"
+      >
+        <h1>
+          The Expensify App
+        </h1>
+      </Link>
+      <button
+        className="btn-blue"
+        onClick={[Function]}
+        type="button"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
 </header>
 `;

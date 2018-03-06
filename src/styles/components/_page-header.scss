@@ -1,0 +1,18 @@
+.page-header {
+  background-color: $xl-grey;
+  margin-bottom: $lSize;
+  padding: $sSize 0 $xsSize 0;
+}
+
+.page-header__title {
+  font-size: $lSize;
+  font-weight: 300;
+  margin: 0 0 $mSize 0;
+  span {
+    font-weight: 600;
+  }
+}
+
+.page-header__actions .btn-blue {
+  text-decoration: none;
+}

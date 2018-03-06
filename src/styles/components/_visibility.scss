@@ -1,0 +1,10 @@
+.showForMobile {
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+.showNonMobile {
+  @media (max-width: 959px) {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+.filters-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: $mSize;
+  @media (min-width: 60rem) {
+    flex-direction: row;
+    margin-bottom: $lSize;
+  }
+}
+
+.filters-container > div {
+  margin-bottom: $sSize;
+  @media (min-width: 60rem) {
+    margin-bottom: 0;
+  }
+}

@@ -2,27 +2,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter';
+import AppRouter, { history } from './routers/AppRouter';
 
 import configureStore from './store/configureStore';
-import { addExpense } from './actions/expenses';
-import { setTextFilter } from './actions/filters';
+import { startSetExpenses } from './actions/expenses';
+import { login, logout } from './actions/auth';
 import getVisibleExpenses from './selectors/expenses'
 
 import 'normalize.css/normalize.css'; // An npm package
 import 'react-dates/lib/css/_datepicker.css'; // for datepicker
 import './styles/styles.scss';
+import { firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
-// store.dispatch() returns an object
-// store.dispatch(addExpense({ description: 'water bill', amount: 5000, createdAt: 1514236934654 }));
-// store.dispatch(addExpense({ description: 'rent', amount: 105000, createdAt: 1513256834654 }));
-// store.dispatch(addExpense({ description: 'gas bill', amount: 3500, createdAt: 1515246734654 }));
-
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
 
 const jsx = (
   <Provider store={store}>
@@ -30,4 +26,30 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('app'));
+let hasRendered = false;
+const renderApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById('app'));
+    hasRendered = true;
+  }
+}
+
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log('log in ' + user.displayName + ', ' + user.uid);
+    store.dispatch(login(user.uid));
+    store.dispatch(startSetExpenses()).then(() => {
+      renderApp();
+    });
+    if (history.location.pathname == '/') {
+      history.push('/dashboard');
+    };
+  } else {
+    console.log('log out');
+    store.dispatch(logout());
+    renderApp();
+    history.push('/');
+  }
+});
